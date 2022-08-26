@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>About Us</title> <!-- sets name of tab -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--scales site to viewport -->
+	<link rel="stylesheet" href="EyeCandyStyleSheet.css"> <!-- links to style sheet -->
+	<link rel="icon" href="../Assests/eyecandyLogo.svg">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Arimo&family=Hind+Siliguri:wght@300&family=Noto+Serif:ital@0;1&display=swap" rel="stylesheet">
+</head>
+
+<body class="red">
+<nav> <!--Navigation Bar -->
+	<div id="navbar" class="black">
+		<div id="navlogo">
+			<a href="Homepage.html"><img src="../Assests/eyecandyLogo.svg" alt="EYECANDYLOGO";/>
+		</div>
+		<div id="navlinks">
+			<ul>
+				<li><a href="AboutContactUS.html">about us</a></li>
+				<li><a href="AboutContactUS.html#contactdetails">location</a></li>
+				<li><a class="button" href="NowShowing.html">BOOK NOW</a></li>
+				<li><a class="button" href="signup.html">JOIN US</a></li>
+			</ul>
+		</div>
+	</div>
+</nav>
+
+<header>
+</header>
+
+<section id="aboutus" class='whitetext parallax'>
+	<h1>About Us</h1>
+	<p>Welcome to Eye Candy Cinemas.<br>
+Eye Candy Cinemas are edgy, alternative venues catering to horror film buffs and lovers of cinema. <br>
+We offer regular screenings of classic films, cult b-movies, and the latest releases in horror. 
+The experiences we create are unique and both a great start to a night out and a main event – 
+our theatre seats are super plush, with free seating in the boutique screening rooms, and we are fully 
+licensed with a curated selection of local wine, craft beer, and a selection of classic movie snacks.<br>
+We have two locations across New Zealand, one in Kingsland and another in Newlands. 
+</p>
+</section>
+
+<section id="contactus" class="black">
+	<div id="contactusblurb">
+		<h1>Contact Us</h1>
+		<p>If you are looking to have your next event hosted by Eye Candy Cinemas, don’t hesitate to reach out. </p>
+	</div>
+	<div id="contactdetails">
+		<div id="wellingtoncontact">
+			<h2>Wellington</h2>
+			<ul>
+				<li>Phone: 04 4770236</li>
+				<li>Email: <a href="mailto:eyecandytawa@eyecandycinemas.nz">eyecandytawa@eyecandycinemas.nz</a></li>
+				<li>Address: 20 - 24 Main Road, Tawa, Wellington</li>
+			</ul>
+		</div>
+		<div id="aucklandcontact">
+			<h2>Auckland</h2>
+				<ul>
+				<li>Phone: 09 847 9264</li>
+				<li>Email: <a href="mailto:eyecandykingsland@eyecandycinemas.nz">eyecandykingsland@eyecandycinemas.nz</a></li>
+				<li>Address: 368 New North Road, Kingsland, Auckland</li>
+			</ul>
+		</div>
+	</div>
+	<div id="maps">	
+		<div id="wellingtonmap">
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3002.746011059973!2d174.82313431528294!3d-41.183706679283446!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d38acdd358de7cd%3A0xf5571e4b725e118a!2s20%20Main%20Road%2C%20Tawa%2C%20Wellington%205028!5e0!3m2!1sen!2snz!4v1656583434015!5m2!1sen!2snz" 
+			width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+		</div>
+		<div id="aucklandmap">
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3191.8474266742364!2d174.74666251514674!3d-36.870070679934194!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d0d47b9da8ecc69%3A0xe216dc73903dc1b9!2s368%20New%20North%20Road%2C%20Kingsland%2C%20Auckland%201021!5e0!3m2!1sen!2snz!4v1656583186982!5m2!1sen!2snz" 
+			width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+		</div>
+	</div>
+</section>
+
+<footer>
+	<div class="black" id="footer">
+		<div id="footerlogo">
+			<a href="Homepage.html"><img src="../Assests/eyecandyLogo.svg" alt="EYECANDYLOGO"/></a>	
+		</div>
+		<div id="footerlinks">
+			<ul>
+				<li><a href="AboutContactUS.html">about us</a></li>
+				<li><a href="AboutContactUS.html#contactus">contact us</a></li>
+				<li><a href="PrivacyPolicy.html">privacy</a></li>
+			</ul>
+		</div>
+		<div id="JoinForm">
+				<form class="emaillist" action="ThanksForSigningUp.html">
+			<input type="submit" value="Join" class="black button">
+			<input type="email" id="enteremail" name="email" placeholder="example@email.com">
+	</form>
+		</div>
+	</div>
+</footer>
+
+<script>
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    document.getElementById("navbar").style.top = "0";
+  } else {
+    document.getElementById("navbar").style.top = "-100px";
+  }
+  prevScrollpos = currentScrollPos;
+}
+</script>
+</body>
+</html>

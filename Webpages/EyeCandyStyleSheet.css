@@ -1,0 +1,794 @@
+/* general styling */
+
+body {
+	display: flex;
+	min-height: 100vh; /*body min height is viewport size */
+	flex-direction: column;
+	margin: 0;
+	padding: 0;
+	overflow-x: hidden;/*hides overflow on x-axis so no lower scroll bar */
+}
+
+section{
+	flex: 1;
+}
+
+/*background image classes */
+
+.red{
+	background-image: url(../Assests/eyecandybackgroundred.jpg);
+	background-position: center center;/*center vert and horz. */
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-size: 100vw;
+	background-color:#B8002E;
+	width:100%;
+	height: 100%;
+
+}
+
+.green{
+	background-image: url(../Assests/eyecandybackground-blackfade.jpg);
+	background-repeat: no-repeat;
+	background-size: 100vw;
+	background-color:#013220;
+
+
+}
+
+.yellow{
+	background-image: url(../Assests/yellow-footer.jpg);
+	background-position: center center;/*center vert and horz. */
+	background-attachment: fixed;
+	overflow-x: hidden;
+	background-repeat: no-repeat;
+	background-size: 100vw;
+	background-color:#FFC20A;
+	width:100%;
+	height: 100%;
+
+}
+
+
+h1 {
+	font-family: Helvetica, sans-serif;
+	font-size: 4rem;
+	padding:0;
+	margin:0;
+	text-transform: lowercase; 
+}
+
+h2{
+	font-family: Helvetica, sans-serif;
+	padding:0;
+	margin:0;
+	text-transform: uppercase; 
+}
+
+h3 {
+	font-family: Helvetica, sans-serif;
+	padding:0;
+	margin:0;
+	text-transform: lowercase; 
+}
+
+p {
+	font-family: 'Noto Serif', serif;
+	padding:0;
+	margin:0;
+}
+
+a {
+	text-decoration: none; /* removes underline from links */
+	font-family: 'Hind Siliguri', sans-serif;
+}
+
+header{
+	width: 100vw;
+	height: 7vh;
+}
+
+.center{
+	padding:5rem 5rem;
+	margin:auto;
+	width: 90vw;
+	text-align: center;
+	
+}
+
+
+/* I have two different colour options for my navbar/footer */
+
+/* white bkgrnd, black text */
+.white{
+	background-color:#FFFFFF;
+	border-color: #000000;
+	color: #000000;
+}
+.white a{ /* colours link text */
+	color: #000000;
+}
+
+/*black bkgrnd, white text */
+.black{
+	background-color:#000000;
+	border-color: FFFFFF;
+	color: #FFFFFF;
+}
+.black a{ /* colours link text */
+	color: #FFFFFF;
+}
+
+.black img{ /*inverts logo*/
+	filter: invert(1);
+}
+
+/*for font only */
+.whitetext{
+	border-color: FFFFFF;
+	color: #FFFFFF;
+}
+
+.whitetext li{
+	border-color: FFFFFF;
+	color: #FFFFFF;
+}
+
+.whitetext a{
+	border-color: FFFFFF;
+	color: #FFFFFF;
+}
+
+.blacktext{
+	border-color: #000000;
+	color: #000000;
+}
+
+.blacktext li{
+	border-color: #000000;
+	color: #000000;
+}
+
+.blacktext a{
+	border-color: #000000;
+	color: #000000;
+}
+
+/* button styles to style a link to look like a button */
+.button {
+	padding: .3rem 2rem;
+	border: 0.125rem solid;
+	text-align: center;
+	transition-duration: 0.2s;
+	cursor: pointer;
+	font-family: 'Hind Siliguri', sans-serif;
+	font-size: 0.9rem;
+}
+
+.button:hover {
+	filter: invert(1); /*inverts logo image by 50% when mouse hovers */
+	transition: 0.2s; /* sets speed for transition */
+}
+
+/* NAVIGATION BARS */
+/*navigation bar - scroll responsive */
+
+#navbar{
+	display: flex;
+	justify-content: space-between + safe; /*space each item in footer w no space on outside ends */
+	align-items: center;/* justifies on cross axis */
+	flex-wrap: nowrap; /* allows wrapping instead of overflow */
+	flex-direction: row; /* puts items in a row */
+	width: 100vw; /* footer is 100% width of viewport */
+	position: fixed; /* keeps bar fixed position relative to viewport */
+	top: 0; 
+	left: 0;
+	right: 0;
+	margin: 0;
+	padding: 0;
+	transition: top 0.3s;/*transition duration for scroll */
+	overflow: hidden;
+}
+
+#navlogo{
+	flex: 1;/* ratio compared to other boxes */
+}
+
+#navlogo img{
+	display: flex;
+	width: 30%;
+	padding: 1% 5% 1% 5%; /* padding around logo */
+	align-items: center;/* justifies on cross axis */
+	justify-content: flex-start; /* justifies on main axis */
+}
+
+#navlogo img:hover{
+	filter: invert(50%); /*inverts logo image by 50% when mouse hovers */
+	transition: 0.2s; /* sets speed for transition */
+}
+
+#navlinks{
+	flex: 2;/* set ratio container will use */
+}
+
+#navlinks ul{
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	flex-flow: row nowrap;
+	list-style-type: none;
+	text-decoration: none;
+	column-gap: 1rem;
+	margin: 0vw 3vw 0vw 0vw;
+
+}
+
+#navlinks a:hover{
+	filter: invert(1); /*inverts when mouse hovers */
+	transition: 0.2s; /* sets speed for transition */
+	text-decoration: none;
+}
+
+
+/* footer */
+
+/* controls footer container */
+#footer{
+	display:flex;
+	justify-content: space-between; /*space each item in footer w no space on outside ends */
+	align-items: center;/* justifies on cross axis */
+	flex-wrap: wrap; /* allows wrapping instead of overflow */
+	flex-direction: row; /* puts items in a row */
+	width: 100vw; /* footer is 100% width of viewport */
+	margin-top: 10vh;
+}
+
+/* controls logo */
+#footerlogo{
+	flex: 1; /* ratio compared to other boxes */
+
+}
+
+#footerlogo img{
+	display: flex;
+	width: 50%;/*width of image compared to container size */
+	padding: 15% 5% 15% 10%; /* padding around logo */
+	align-items: center;/* justifies on cross axis */
+}
+
+#footerlogo img:hover{
+	filter: invert(50%); /*inverts logo image by 50% when mouse hovers */
+	transition: 0.2s; /* sets speed for transition */
+}	
+
+/* controls navigation links */
+#footerlinks{
+	flex: 1.5; /* ratio compared to other boxes */
+
+
+}
+
+#footerlinks a:hover{
+	filter: invert(50%); /*inverts logo image by 50% when mouse hovers */
+	transition: 0.2s; /* sets speed for transition */
+}
+
+#footer ul{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	flex-direction: row;
+	list-style-type: none;
+	text-decoration: none;
+
+}
+
+/* controls 'Join' button */
+#JoinForm{
+	display: flex;
+	flex: 1; /* ratio compared to other boxes */
+	justify-content: center; /* justifies on main axis */
+	align-items: center;/* justifies on cross axis */
+
+}
+
+/*NAVIGATION BARS END */
+
+/*GALLERY */
+/* parent grid for layout */
+#gallerycontainer {
+	display: grid;/*turns to grid */
+	height: 150vh; /*sets height of grid */
+	margin: 0; /*no margins */
+	grid-template-columns: .4fr 2.2fr .4fr; /*fractions of how many columns and how the should be ratioed */
+	grid-template-rows: .2fr 1fr; /*fractions of how many rows and how the should be ratioed */
+	grid-template-areas: "header header header"
+						 "left main right";
+}
+
+.layoutblock{
+
+}
+
+.cell-1{
+	grid-area: header;
+	height: 0%;
+}
+}
+
+.cell-2{
+
+	grid-area:left;
+
+}
+
+.cell-4{
+
+	grid-area:right;
+
+}
+
+/*my actual movie poster gallery is contained in cell 3 */
+.cell-3{
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	align-content: space-between;
+	gap: 1%;
+	
+
+}
+
+.galleryblock {
+	width: 23%;
+
+}
+
+/*each poster item starts here */
+.galleryblock img{
+	width:100%;
+	height: 100%;
+}
+
+/*image hover response */
+.galleryblock img:hover{
+	transform: scale(1.3);
+	transition-duration: 0.2s;
+}
+
+
+/* GALLERY ENDS */
+
+/*HERO IMAGE */
+
+.heroimage{
+	display: flex;/* turns into flex container */
+	flex-direction: column; /* main axis column */
+	justify-content: center; /*justifies flex items in centre of main axis - in this case horizontally*/
+	align-items: center; /*aligns items centre on cross axis */
+	row-gap: 1rem;
+	padding: 0; /*set padding and margins to 0*/
+	margin: 20vh 0vw 30vh 0vw; 
+	width: 100vw;
+}
+
+.heroimage .logo{
+	width: 50vh;
+	padding-bottom:1rem;
+}
+
+.heroimage .backgroundimage {
+	position: fixed;
+	width: 100vw;
+	z-index:-1;
+	animation: flickers 3s 1;
+	filter: opacity(0);
+
+	
+}
+
+.heroimage a{
+}
+
+/*hero image animation - lighting spooky flciker look */
+
+.flicker {
+	animation: flickers 2.1s 1;
+}
+@keyframes flickers{
+	0%{
+	transform: none;
+	filter: opacity(0.1);
+	}
+	5%{
+	transform: none;
+	filter: opacity(0.1);
+	}
+	12%{
+	transform: skew(-0.5deg, -0.9deg);
+	filter: opacity(0.6);
+	}
+	20%{
+	transform: none;
+	filter: opacity(0.1);
+	}
+	31%{
+	transform: skew(-0.5deg, -0.9deg);
+	filter: opacity(0.6);
+	}
+	45%{
+	transform: none;
+	filter: opacity(0.1);
+	}
+	52%{
+	transform: none;
+	filter: opacity(0.1);
+	}
+	59%{
+	transform: skew(-1deg, 0.2deg);
+	filter: opacity(0.6);
+	}
+	73%{
+	transform: skew(-0.5deg, -0.9deg);
+	filter: opacity(0.6);
+	}
+	81%{
+	transform: none;
+	filter: opacity(0.1);
+	}
+	87%{
+	transform: skew(-1deg, 0.2deg);
+	filter: opacity(0.6);
+	}
+	92%{
+	transform: none;
+	filter: opacity(0.1);
+	}
+	100%{
+	transform: none;
+	filter: opacity(0);
+	}
+}
+
+
+/*HERO IMAGE ENDS */
+/*HOMEPAGE STYLING ENDS*/
+
+/*NOW SHOWING PAGE STYLING BEGINS */
+
+#trailer iframe {
+	width: 100%;
+	aspect-ratio: 16/9;/*maintain aspect ratio when resizing */
+	position: fixed;
+	z-index:-1;
+}
+
+#nowshowingheader {
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-end;
+	padding: 60vh 0vw 0vh 0vw;
+	margin: 0;
+	width: 100vw;
+	height: 100vh;
+}
+
+#nowshowingheader img{
+	padding: 0;
+	margin: 0% 0% 0% 12%;
+	width: 20vw;
+	filter: invert(1);
+
+}
+
+/*NOW SHOWING PAGE STYLING ENDS */
+
+/*MOVIE PAGE STYLING BEGINS */
+
+/* movie information section */
+#movieinformation{
+	display:flex;
+	flex-flow: row wrap; /*flex items in row, can wrap */
+	justify-content: center; /*jsutifies content in centre */
+	padding: 0;
+	margin: 0;
+	height: 80vh;
+	width: 100%;
+	overflow: hidden; /*hides overflow so no scroll bar */
+}
+
+#movieplayer {
+	flex: 2;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0;
+	margin: 0;
+}
+
+#movieplayer iframe {
+	width: 100%;
+	padding: 25px 50px;
+	aspect-ratio: 16/9;/*maintain aspect ratio when resizing */
+}
+
+#moviedetails {
+	flex: 1;
+	display: flex;
+	flex-flow: column nowrap;
+
+	
+}
+
+#moviedetails div{
+	text-align: right; /*aligns text right */
+	padding: 25px 50px;
+
+}
+
+/*screening times styling */
+
+#screeningtimes {
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+	padding: 1rem;
+	margin: 0;
+
+}
+
+#screeningtimes div {
+	width: 60vw;
+	padding: 1rem;
+	margin: 0;
+	overflow-x: auto;/*when the table is too big and overflows, it gets scroll bars */
+}
+
+#screeningtimes h1{
+	text-align: left;
+	padding: 0;
+	margin: 0;
+}
+
+#screeningtimes th, td, tr {
+	width: 5rem;
+	height:3rem;
+	padding: 0;
+	margin: auto;
+	text-align: center;
+	font-family: 'Hind Siliguri', sans-serif;
+	
+}
+
+#screeningtimes td:hover{
+	transform: scale(1.3);
+	transition-duration: 0.2s;
+}
+
+#screeningtimes table {
+	width: 100%;
+	height: 90%;
+	padding: 0;
+	margin: 0;
+}
+
+
+/*MOVIE PAGE STYLING ENDS */
+
+/* ABOUT US AND CONTACT PAGE STYLING BEGINS */
+#aboutus {
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+	justify-content: center;
+	padding: 0;
+	margin: 3rem 0rem;
+}
+
+#aboutus h1 {
+	width: 50vw;
+	padding:0;
+	margin:0;
+}
+
+#aboutus p{
+	width: 50vw;
+	padding:0;
+	margin:0;
+}
+
+
+#contactus {
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: center;
+	width: 100vw;
+	margin: 10rem 0rem 10rem;
+	padding: 0;
+}
+
+#contactusblurb{
+	display: flex;
+	flex-flow: column nowrap;
+	width: 50vw;
+	margin: 0rem 0rem 1rem 0rem;
+}
+
+#contactdetails{
+	display: flex;
+	flex-flow: row nowrap;
+	width: 50vw;
+}
+
+#contactdetails li{
+	font-family: 'Noto Serif', serif;
+}
+
+#maps{
+	display: flex;
+	flex-flow: row nowrap;
+	flex: 1;
+	justify-content: flex-start;
+
+
+}
+
+#maps div{
+
+}
+
+#maps iframe{
+	width: 90%;
+	padding: 1rem;
+}
+
+/* ABOUT US AND CONTACT PAGE STYLING ENDS */
+
+
+/*PRIVACY POLICY PAGE */
+
+#privacypolicy {
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+	justify-content: flex-end;
+	padding: 7rem 0rem 10rem 0rem;
+	
+}
+
+#privacypolicy h1{
+	width: 50vw;
+
+}
+
+#privacypolicy p{
+	width: 50vw;
+	font-family: 'Hind Siliguri', sans-serif;
+
+}
+
+#privacypolicy ul li{
+	width: 50vw;
+	font-style: italic;
+
+}
+
+/*PRIVACY POLICY PAGE ENDS */
+
+/*FORM STYLING */
+
+#membership {
+	display:flex;
+	flex-flow: column nowrap;
+	align-items: start;
+	padding:1rem 5rem;
+	margin:auto;
+	background-color:#FFFFFF;
+	width: 60vw;
+	row-gap: 10px;
+}
+
+#membership label {
+	font-family: Helvetica, sans-serif;
+	padding:0;
+	margin:0;
+	color: black;
+	text-transform: lowercase;
+	font-size: 0.7rem;
+}
+
+
+#membership input[type=text] {
+	border: 1px solid #0A0A0B;
+	width: 100%;
+	padding: 0.5rem 0rem;
+}
+
+#membership input[type=text]:focus {
+	border: 1px solid #339933;
+	width: 100%;
+	outline: none;
+	background-color: #669966;
+	padding: 0.5rem 0rem;
+
+}
+
+#membership input[type=email] {
+	border: 1px solid #0A0A0B;
+	width: 100%;
+	padding: 0.5rem 0rem;
+}
+
+#membership input[type=email]:focus {
+	border: 1px solid #339933;
+	width: 100%;
+	outline: none;
+	background-color: #669966;
+	padding: 0.5rem 0rem;
+}
+
+#membership select {
+	border: 1px solid #339933;
+	width: 100%;
+	outline: none;
+	padding: 0.5rem 0rem;
+}
+
+#membership select:focus {
+	outline: none;
+	background-color: #669966;
+}
+
+#membership input[type=submit] {
+	width: 30%;
+	background-color: none;
+	
+}
+
+.fullwidth {
+	width: 99%;
+	padding: 0;
+	margin: 0;
+
+}
+
+.emaillist {
+	display: flex;
+	flex-flow: row nowrap;
+}
+
+.emaillist input[type=email]{
+	padding: 0;
+	margin: 0;
+	outline: none;
+	border-radius: 0;
+	
+}
+
+.emaillist input[type=email]:focus{
+	padding: 0;
+	margin: 0;
+	outline: none;
+	border-radius: 0;	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

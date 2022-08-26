@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Now Showing</title> <!-- sets name of tab -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--scales site to viewport -->
+	<link rel="stylesheet" href="EyeCandyStyleSheet.css"> <!-- links to style sheet -->
+	<link rel="icon" href="../Assests/eyecandyLogo.svg">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Arimo&family=Hind+Siliguri:wght@300&family=Noto+Serif:ital@0;1&display=swap" rel="stylesheet">
+</head>
+
+
+<!--<div class="container"></div> <!--- Enclose all seperate elements -->
+
+
+<body class="yellow">
+<nav> <!--Navigation Bar -->
+	<div id="navbar" class="black">
+		<div id="navlogo">
+			<a href="Homepage.html"><img src="../Assests/eyecandyLogo.svg" alt="EYECANDYLOGO";/>
+		</div>
+		<div id="navlinks">
+			<ul>
+				<li><a href="AboutContactUS.html">about us</a></li>
+				<li><a href="AboutContactUS.html#contactdetails">location</a></li>
+				<li><a class="button" href="NowShowing.html">BOOK NOW</a></li>
+				<li><a class="button" href="signup.html">JOIN US</a></li>
+			</ul>
+		</div>
+	</div>
+</nav>
+
+<section id="trailer">
+	<iframe src="https://www.youtube.com/embed/NL6mioAlpJk?autoplay=1&mute=1&loop=1" 
+	title="autoplay video trailer" frameborder="0" allowfullscreen>
+	</iframe>
+</section>
+
+<section id="nowshowingheader">
+	<img src="../Assests/nowshowing.svg" alt="EYECANDYLOGO">
+</section>
+
+<!--gallery -->
+<section id="gallerycontainer" class="mainpage">
+	<div class="layoutblock cell-1"></div>
+	<div class="layoutblock cell-2"></div>
+	<div class="layoutblock cell-3">
+		<div class="galleryblock item-1"><a href="RosemarysBaby.html"><img src="..//Assests/Posters/RosemarysBaby.jpg" alt="RosemarysBaby"></a></div>
+		<div class="galleryblock item-1"><a href="Hellraiser.html"><img src="..//Assests/Posters/Hellraiser.jpg" alt="Hellraiser"></div>
+		<div class="galleryblock item-3"><a href="Ringu.html"><img src="..//Assests/Posters/Ringu.jpg" alt="Ringu"></div>
+		<div class="galleryblock item-4"><a href="TheEvilDead.html"><img src="..//Assests/Posters/TheEvilDead.jpg" alt="TheEvilDead"></div>
+		<div class="galleryblock item-4"><a href="Alien.html"><img src="..//Assests/Posters/Alien.jpg" alt="Alien"></div>
+		<div class="galleryblock item-5"><a href="Carrie.html"><img src="..//Assests/Posters/Carrie.jpg" alt="Carrie"></div>
+		<div class="galleryblock item-6"><a href="ChineseGhostStory.html"><img src="..//Assests/Posters/ChineseGhostStory.jpg" alt="ChineseGhostStory"></div>
+		<div class="galleryblock item-7"><a href="Hereditary.html"><img src="..//Assests/Posters/Hereditary.jpg" alt="Hereditary"></div>
+		<div class="galleryblock item-9"><a href="JuOnTheGrudge.html"><img src="..//Assests/Posters/JuOnTheGrudge.jpg" alt="JuOnTheGrudge"></div>
+		<div class="galleryblock item-10"><a href="TheBlairWitchProject.html"><img src="..//Assests/Posters/TheBlairWitchProject.jpg" alt="TheBlairWitchProject"></div>
+		<div class="galleryblock item-11"><a href="TheExorcist.html"><img src="..//Assests/Posters/TheExorcist.jpg" alt="TheExorcist"></div>
+		<div class="galleryblock item-12"><a href="TheRockyHorrorPictureSHow.html"><img src="..//Assests/Posters/TheRockyHorrorPictureSHow.jpg" alt="TheRockyHorrorPictureSHow"></div>
+		<div class="galleryblock item-13"><a href="TheShining.html"><img src="..//Assests/Posters/TheShining.jpg" alt="TheShining"></div>
+		<div class="galleryblock item-14"><a href="TheWitchesOFEastwick.html"><img src="..//Assests/Posters/TheWitchesOFEastwick.jpg" alt="TheWitchesOFEastwick"></div>
+		<div class="galleryblock item-15"><a href="WhateverHappenedToBabyJane.html"><img src="..//Assests/Posters/WhateverHappenedToBabyJane.jpg" alt="WhateverHappenedToBabyJane"></div>
+		<div class="galleryblock item-16"><a href="JennifersBody.html"><img src="..//Assests/Posters/JennifersBody.jpg" alt="JennifersBody"></div>
+	</div>
+	<div class="layoutblock cell-4"></div>
+</section>
+
+
+<footer>
+	<div class="black" id="footer">
+		<div id="footerlogo">
+			<a href="Homepage.html"><img src="../Assests/eyecandyLogo.svg" alt="EYECANDYLOGO"/></a>	
+		</div>
+		<div id="footerlinks">
+			<ul>
+				<li><a href="AboutContactUS.html">about us</a></li>
+				<li><a href="AboutContactUS.html#contactus">contact us</a></li>
+				<li><a href="PrivacyPolicy.html">privacy</a></li>
+			</ul>
+		</div>
+		<div id="JoinForm">
+				<form class="emaillist" action="ThanksForSigningUp.html">
+			<input type="submit" value="Join" class="black button">
+			<input type="email" id="enteremail" name="email" placeholder="example@email.com">
+	</form>
+		</div>
+	</div>
+</footer> 	
+
+<script><!-- scroll bar transition -->
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    document.getElementById("navbar").style.top = "0";
+  } else {
+    document.getElementById("navbar").style.top = "-100px";
+  }
+  prevScrollpos = currentScrollPos;
+}
+</script>
+</body>
+</html>

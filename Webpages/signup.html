@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Join Us</title> <!-- sets name of tab -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--scales site to viewport -->
+	<link rel="stylesheet" href="EyeCandyStyleSheet.css"> <!-- links to style sheet -->
+	<link rel="icon" href="../Assests/eyecandyLogo.svg">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Arimo&family=Hind+Siliguri:wght@300&family=Noto+Serif:ital@0;1&display=swap" rel="stylesheet">
+</head>
+
+<body class="green">
+<nav> <!--Navigation Bar -->
+	<div id="navbar" class="black">
+		<div id="navlogo">
+			<a href="Homepage.html"><img src="../Assests/eyecandyLogo.svg" alt="EYECANDYLOGO";/>
+		</div>
+		<div id="navlinks">
+			<ul>
+				<li><a href="AboutContactUS.html">about us</a></li>
+				<li><a href="AboutContactUS.html#contactdetails">location</a></li>
+				<li><a class="button" href="NowShowing.html">BOOK NOW</a></li>
+				<li><a class="button" href="signup.html">JOIN US</a></li>
+			</ul>
+		</div>
+	</div>
+</nav>
+
+<header>
+</header> 
+
+<section class="center whitetext">
+	<h1>become an eye candy cinemas member?</h1>
+	<h2>members get discounts, early access, and updates on what's going on before anybody else!</h2>
+</section>
+
+	<form id="membership" action="ThanksForSigningUp.html" autocomplete="on"><!--- when submit is pushed goes to thankyou page -->
+		<h1>Sign up for free!</h1>
+		<div class="fullwidth">
+			<label for="fname">What's Your First Name?</label><br>
+			<input type="text" id="fname" name="fname" placeholder="Your Name" required autofocus><br>
+			<label for="lname">What's Your Last Name?</label><br>
+			<input type="text" id="lname" name="lname" placeholder="Your Surname">
+		</div>
+		<div class="fullwidth">
+			<label for="email">What's Your Email Address?</label><br>
+			<input type="email" id="email" name="email" placeholder="example@email.com" required>
+		</div>
+		<div>
+			<h3>Which branches do you want to hear from?</h3>
+			<input type="checkbox" id="wellingtonlocation" name="location" value="Wellington">
+			<label for="wellingtonlocation">Wellington!</label>
+			<input type="checkbox" id="aucklandlocation" name="location" value="Auckland">
+			<label for="aucklandlocation">Auckland!</label>
+		</div>
+		<div>
+			<h3>Are you currently a student?</h3>
+			<input type="radio" id="yesstudent" name="isstudent" value="Yes">
+			<label for="student">Yes</label>
+			<input type="radio" id="notstudent" name="isstudent" value="No">
+			<label for="student">No</label>
+		</div>
+		<div class="fullwidth">
+			<label for="whatemail">What do you want to hear about?</label><br>
+			<select id="whatemail" name="whatemail" required>
+				<option value="upcomingmovies">Upcoming Movies & Events</option>
+				<option value="specialoffers">Special Offers</option>
+				<option value="both">Both!</option>
+			</select>
+		</div>
+		<div class="fullwidth">
+			<input type="submit" value="Join" class="button black">
+		</div>
+	</form>
+
+<footer>
+	<div class="black" id="footer">
+		<div id="footerlogo">
+			<a href="Homepage.html"><img src="../Assests/eyecandyLogo.svg" alt="EYECANDYLOGO"/></a>	
+		</div>
+		<div id="footerlinks">
+			<ul>
+				<li><a href="AboutContactUS.html">about us</a></li>
+				<li><a href="AboutContactUS.html#contactus">contact us</a></li>
+				<li><a href="PrivacyPolicy.html">privacy</a></li>
+			</ul>
+		</div>
+		<div id="JoinForm">
+				<form class="emaillist" action="ThanksForSigningUp.html">
+			<input type="submit" value="Join" class="black button">
+			<input type="email" id="enteremail" name="email" placeholder="example@email.com">
+	</form>
+		</div>
+	</div>
+</footer>
+<script>
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    document.getElementById("navbar").style.top = "0";
+  } else {
+    document.getElementById("navbar").style.top = "-100px";
+  }
+  prevScrollpos = currentScrollPos;
+}
+</script>
+</body>
+</html>

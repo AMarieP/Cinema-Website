@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Eye Candy Privacy Policy</title> <!-- sets name of tab -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--scales site to viewport -->
+	<link rel="icon" href="../Assests/eyecandyLogo.svg">
+	<link rel="stylesheet" href="EyeCandyStyleSheet.css"> <!-- links to style sheet -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Arimo&family=Hind+Siliguri:wght@300&family=Noto+Serif:ital@0;1&display=swap" rel="stylesheet">
+</head>
+
+
+<!--<div class="container"></div> <!--- Enclose all seperate elements -->
+
+
+<body>
+<nav> <!--Navigation Bar -->
+	<div id="navbar" class="black">
+		<div id="navlogo">
+			<a href="Homepage.html"><img src="../Assests/eyecandyLogo.svg" alt="EYECANDYLOGO";/>
+		</div>
+		<div id="navlinks">
+			<ul>
+				<li><a href="AboutContactUS.html">about us</a></li>
+				<li><a href="AboutContactUS.html#contactdetails">location</a></li>
+				<li><a class="button" href="NowShowing.html">BOOK NOW</a></li>
+				<li><a class="button" href="signup.html">JOIN US</a></li>
+			</ul>
+		</div>
+	</div>
+</nav>
+<header>
+</header>
+
+<section id="privacypolicy" class="black">
+	<br>
+	<h1>Privacy Policy</h1>
+	<p>We collect your personal information in order to:</p>
+	<ul>
+		<li>have a better understanding of how people use the site</li>
+		<li>collect your information if you choose to join our membership program.</li>
+		<li>collect information for payment purposes.</li>
+		<li>use information for marketing.</li>
+		<li>cater content based on location</li>
+	</ul>
+	<p>Besides our staff, we share this information with:</p>
+	<ul>
+		<li>advertising agencies in order to make our content better for you and target ads.</li>
+		<li>a 3rd party in order to to collect payments</li>
+		<li>Google in order to cater content based on location</li>
+	</ul>
+	<p>Providing some information is optional. If you choose not to enter location tracking, we'll be unable to cater content to your location.
+If you choose not to enter personal details we'll be unable to sign you up for membership.
+We keep your information safe by encrypting it and only allowing relevant staff access.
+You have the right to ask for a copy of any personal information we hold about you, and to ask for it to be corrected if you think it is wrong. 
+If you’d like to ask for a copy of your information, or to have it corrected, please contact us at: <br><a href="mailto:eyecandykingsland@eyecandycinemas.nz">eyecandykingsland@eyecandycinemas.nz</a>, or 09 847 9264, or 368 New North Road, Kingsland, Auckland.
+	</p>
+	<br>
+	<br>
+</section>
+
+<footer>
+	<div class="white" id="footer">
+		<div id="footerlogo">
+			<a href="Homepage.html"><img src="../Assests/eyecandyLogo.svg" alt="EYECANDYLOGO"/></a>	
+		</div>
+		<div id="footerlinks">
+			<ul>
+				<li><a href="AboutContactUS.html">about us</a></li>
+				<li><a href="AboutContactUS.html#contactus">contact us</a></li>
+				<li><a href="PrivacyPolicy.html">privacy</a></li>
+			</ul>
+		</div>
+		<div id="JoinForm">
+				<form class="emaillist" action="ThanksForSigningUp.html">
+			<input type="submit" value="Join" class="black button">
+			<input type="email" id="enteremail" name="email" placeholder="example@email.com">
+	</form>
+		</div>
+	</div>
+</footer> 	
+
+<script>
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    document.getElementById("navbar").style.top = "0";
+  } else {
+    document.getElementById("navbar").style.top = "-100px";
+  }
+  prevScrollpos = currentScrollPos;
+}
+</script>
+</body>
+</html>

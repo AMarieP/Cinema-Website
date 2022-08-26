@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Eye Candy Cinemas</title> <!-- sets name of tab -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--scales site to viewport -->
+	<link rel="stylesheet" href="EyeCandyStyleSheet.css"> <!-- links to style sheet -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Arimo&family=Hind+Siliguri:wght@300&family=Noto+Serif:ital@0;1&display=swap" rel="stylesheet">
+</head>
+
+
+<!--<div class="container"></div> <!--- Enclose all seperate elements -->
+
+
+<body>
+<nav> <!--Navigation Bar -->
+	<div id="navbar" class="black">
+		<div id="navlogo">
+			<a href="https://www.w3schools.com/html/html_filepaths.asp"><img src="../Assests/eyecandyLogo.svg" alt="EYECANDYLOGO";/>
+		</div>
+		<div id="navlinks">
+			<ul>
+				<li><a href="placeholder">now showing</a></li>
+				<li><a href="placeholder">about us</a></li>
+				<li><a class="button " href="placeholder">BOOK NOW</a></li>
+				<li><a class="button" href="placeholder">JOIN US</a></li>
+			</ul>
+		</div>
+	</div>
+</nav>
+
+<div id="movieinformation">
+</div>
+
+<div id="screeningtimes">
+</div>
+
+<footer>
+	<div class="black" id="footer">
+		<div id="footerlogo">
+			<a href="placeholder"><img src="../Assests/eyecandyLogo.svg" alt="EYECANDYLOGO"/></a>	
+		</div>
+		<div id="footerlinks">
+			<ul>
+				<li><a href="placeholder">about us</a></li>
+				<li><a href="placeholder">contact us</a></li>
+				<li><a href="placeholder">privacy</a></li>
+			</ul>
+		</div>
+		<div id="JoinForm">
+			Join button
+		</div>
+		</div>
+</footer> 	
+
+
+
+
+
+
+
+
+<script>
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    document.getElementById("navbar").style.top = "0";
+  } else {
+    document.getElementById("navbar").style.top = "-100px";
+  }
+  prevScrollpos = currentScrollPos;
+}
+</script>
+</body>
+</html>
